@@ -1,6 +1,8 @@
 set mouse=a
 
 set number
+
+
 set relativenumber
 
 call plug#begin('~/.vim/plugged')

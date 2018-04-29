@@ -1,4 +1,6 @@
 language: python
+python:
+  - "3.6"
 before_install: echo "Preparing build"
 script: echo "Building"
 after_success: echo "Successfully built website"

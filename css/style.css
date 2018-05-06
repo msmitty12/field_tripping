@@ -13,3 +13,11 @@ body:before {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.card {
+	opacity: 0.8;
+}
+
+.card-img-top {
+	opacity: 0.5;
+}

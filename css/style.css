@@ -21,3 +21,7 @@ body:before {
 .card-img-top {
 	opacity: 0.5;
 }
+
+iframe {
+	filter: invert(100%);
+}

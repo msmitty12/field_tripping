@@ -27,18 +27,37 @@
 						<a class="nav-link" href="sheet.html">Where we are going.</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Where our car is going.</a>
+						<a class="nav-link" href="route.html">Where our car is going.</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="pictures.html">Pictures</a>
+						<a class="nav-link" href="#">Pictures</a>
 					</li>
 				</ul>
 			</div>
-		</nav>
+        </nav>
+        
+        <div class="container">
+            <?php
+                $dirname = "images/pictures";
+                $images = scandir($dirname);
+                shuffle($images);
+                $ignore = Array(".", "..");
+                foreach($images as $curimg){
+                    if(!in_array($curimg, $ignore)) {
+                        echo "
+                        <div class="col-sm-12 col-xl-4">
+                            <div class="card bg-dark">
+                                <a href='".$dirname.$curimg."'>
+                                    <img src='img.php?src=".$dirname.$curimg."&w=300&zc=1'/>
+                                </a>
+                            </div>
+                        </div>
+                        ";
+                    }
+                }                 
+            ?>
+        </div>
 
-      <div class="overlay embed-responsive embed-responsive-21by9">
-			<iframe src="https://goo.gl/3NzCb1" frameborder="0"></iframe>
-      </div>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->

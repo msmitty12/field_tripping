@@ -23,8 +23,9 @@
 			  clientId: 'b126742b7a5c48f4b51e41b34410d13b',
 			  accessToken: '3409957699.b126742.22956c2fd97e4d94964f405c2690be5d',
 			  filter: function(image) {
-					return image.tags.indexOf('69daysabroad') >= 0;
-			  }
+					return image.tags.indexOf('2018roadtrip') >= 0;
+			  },
+			 template: '<a href="{{link}}"><img class="center" src="{{image}}"/></a><div class="schedule card text-center"><p>{{caption}}</p><h4>Likes: {{likes}}7</h4></div>'
 		 });
 		 feed.run();
 	</script>
@@ -51,9 +52,8 @@
 			</div>
         </nav>
 
-		  <div id="instafeed"></div>
+		  <div class="container" id="instafeed"></div>
 
-		  </div>
         
 
 		<!-- Optional JavaScript -->

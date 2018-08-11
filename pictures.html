@@ -49,12 +49,11 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 	<script>
 $(document).ready(function(){
-	var dir = "images/pictures/";
+	var dir = "./images/pictures/";
 
 	$.ajax ({
 		url : dir,
 		success : function (data) {
-			console.log('we here');
 			$(data).find("a").attr("href", function (i, val) {
 				if (val.match(/\.(jpeg|jpg|png|gif)%/) ) {
 					$("#pictures").append( "<div class=\"col-sm-12 col-md-6 col-lg-12\"> <img src='" + dir + val + "'></div>" );

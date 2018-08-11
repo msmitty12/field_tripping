@@ -54,6 +54,7 @@ $(document).ready(function(){
 	$.ajax ({
 		url : dir,
 		success : function (data) {
+			console.log('we here');
 			$(data).find("a").attr("href", function (i, val) {
 				if (val.match(/\.(jpeg|jpg|png|gif)%/) ) {
 					$("#pictures").append( "<div class=\"col-sm-12 col-md-6 col-lg-12\"> <img src='" + dir + val + "'></div>" );

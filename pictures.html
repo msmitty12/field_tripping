@@ -19,8 +19,12 @@
 		 var feed = new Instafeed({
 			  get: 'user',
 			  userId: "3409957699",
+			  //userId: '307725393',
 			  clientId: 'b126742b7a5c48f4b51e41b34410d13b',
-			  accessToken: '3409957699.b126742.22956c2fd97e4d94964f405c2690be5d'
+			  accessToken: '3409957699.b126742.22956c2fd97e4d94964f405c2690be5d',
+			  filter: function(image) {
+					return image.tags.indexOf('69daysabroad') >= 0;
+			  }
 		 });
 		 feed.run();
 	</script>
